@@ -78,6 +78,11 @@ stem(abs(polyval(p,EPR)-UV)./UV,'*','color','black')
 hold on
 stem(abs(Pred-UV)./UV,'color','blue')
 
+%%% Comparision with naive ML
+load BadPred
+stem(BadPred,'x','color','red')
+
+
 ylabel('Relative AD')
 
 w=1:44;
@@ -104,4 +109,4 @@ set(gcf,'PaperUnits','inches','PaperPosition',[0 0 12 8],'PaperSize',[12 8])
 
 print -dpng Fig2deviations
 
-%print -dpng Fig2deviationsNaive
+
